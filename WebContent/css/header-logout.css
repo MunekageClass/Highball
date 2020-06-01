@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.background {
+	background-color: #ff5959;
+}
+
+.title {
+	text-align: center;
+	font-size: 250%;
+	color: #ffffff;
+}
+

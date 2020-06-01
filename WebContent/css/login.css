@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.userid {
+	position: absolute;
+	width: 30%;
+	height: 15%;
+	left: 30%;
+	top: 100px;
+	font-family : Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 56px;
+	color: #000000;
+	font-family: Roboto;
+}
+
+.name {
+	position: absolute;
+	width: 30%;
+	height: 20px;
+	left: 30%;
+	top: 180px;
+	background : #FFFFFF;
+	mix-blend-mode: darken;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	border-radius: 20px;
+	background: #FFFFFF;
+}
+
+.pass {
+	position: absolute;
+	width: 30%;
+	height: 15%;
+	left: 30%;
+	top: 200px;
+	font-family : Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 56px;
+	color: #000000;
+	font-family: Roboto;
+}
+
+.password {
+	position: absolute;
+	width: 30%;
+	height: 20px;
+	left: 30%;
+	top: 280px;
+	background : #FFFFFF;
+	mix-blend-mode: darken;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	border-radius: 20px;
+	background: #FFFFFF;
+}
+
+.login {
+	position: absolute;
+	width: 15%;
+	height: 30px;
+	left: 37%;
+	top: 340px;
+	background: #FF5959;
+	mix-blend-mode: darken;
+	border: 1px solid #FF5959;
+	box-sizing: border-box;
+	border-radius: 20px;
+	color: white;
+}
