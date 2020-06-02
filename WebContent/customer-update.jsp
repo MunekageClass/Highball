@@ -18,7 +18,12 @@
 		List<CustomerBean> userList = (List<CustomerBean>) session.getAttribute("userList");
 	%>
 
-	<h1>顧客情報編集画面</h1>
+	<h1>顧客情報編集</h1>
+
+	<form action="customer-list-servlet" method="POST">
+		<button type='submit' class="list">顧客一覧に戻る</button>
+	</form>
+
 	<form action="customer-update" method="post">
 
 
@@ -41,11 +46,11 @@
 				<td><%=customer.getCm_name_kana()%></td>
 				<td><%=customer.getPt_code()%></td>
 				<td><%=customer.getAddress()%></td>
-				<td><%=customer.getArea_code()%></td>
+				<td><%=customer.getArea_name()%></td>
 				<td><%=customer.getCt_person_name()%></td>
 				<td><%=customer.getCt_person_name_kana()%></td>
 				<td><%=customer.getCt_person_tel()%></td>
-				<td><%=customer.getUser_id()%></td>
+				<td><%=customer.getUser_name()%></td>
 			</tr>
 			<tr>
 				<td>後</td>
@@ -82,34 +87,13 @@
 				</select></td>
 			</tr>
 		</table>
-		顧客ID：<%=customer.getCm_id()%>
-		さんの情報を編集します。<br> ※空欄の場合は、編集されません。
+		<div class="id">
+			顧客ID：<%=customer.getCm_id()%>
+			さんの情報を編集します。<br> ※空欄の場合は、編集されません。
+		</div>
 
 
-		<!--
-	<input type="text" name="customer_name" size="5">
-	<input type="text" name="customer_name_kana" size="10">
-	<input type="text" name="postal_code" size="5">
-	<input type="text" name="address" size="5">
-	<input type="text" name="area_code" size="5">
-	<input type="text" name="contact_person_name" size="5">
-	<input type="text" name="contact_person_name_kana" size="5">
-	<input type="text" name="contact_person_tel" size="5">
-	<input type="text" name="user_id" size="5"> -->
-		<!--     <table>
-    <tr>
-		<th><input type="text" name="customer_name" size="20"></th>
-		<th><input type="text" name="customer_name_kana" ></th>
-		<th><input type="text" name="postal_code" ></th>
-		<th><input type="text" name="address" ></th>
-		<th><input type="text" name="area_code" ></th>
-		<th><input type="text" name="contact_person_name" ></th>
-		<th><input type="text" name="contact_person_name_kana" ></th>
-		<th><input type="text" name="contact_person_tel" ></th>
-		<th><input type="text" name="user_id" ></th>
-	</tr>
-    </table> -->
-		<br> <input type="submit" value="編集する">
+		<br> <input type="submit" value="変更する" class="edit">
 	</form>
 </body>
 </html>

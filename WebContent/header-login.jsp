@@ -9,7 +9,7 @@
 	</form>
 
 	<div class="login-user">
-		ログインユーザー：<%=(String) session.getAttribute("user_name")%>さん
+		ログインユーザ ： <%=(String) session.getAttribute("user_name")%>さん
 	</div>
 
 	<br>

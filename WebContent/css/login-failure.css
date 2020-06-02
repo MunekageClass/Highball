@@ -1,1 +1,48 @@
 @charset "UTF-8";
+
+p{
+position: absolute;
+width: 50%;
+height: 20%;
+left: 40%;
+top: 10%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 84px;
+
+color: #000000;
+}
+
+.failure{
+position: absolute;
+width: 50%;
+height: 20%;
+left: 41%;
+top: 20%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 15px;
+line-height: 84px;
+
+color: #000000;
+}
+
+.loginfailbutton{
+position: absolute;
+width: 20%;
+height: 10%;
+left: 39%;
+top: 40%;
+
+background: #FF5959;
+mix-blend-mode: darken;
+border: 1px solid #FF5959;
+box-sizing: border-box;
+border-radius: 20px;
+color: white;
+}

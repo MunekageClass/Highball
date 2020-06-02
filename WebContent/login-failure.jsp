@@ -5,12 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>ログイン失敗</title>
+<link rel="stylesheet" type="text/css" href="css/login-failure.css">
 </head>
 <body>
 	<%@ include file = "header-logout.jsp" %>
 	<form action="login.jsp" method="POST">
-		<h3>ログインに失敗しました。</h3>
-		<input type="submit" value="ログイン画面に戻る">
+		<p>ログイン失敗</p>
+		<p class="failure">ログインに失敗しました。</p>
+		<input type="submit" value="ログイン画面に戻る" class="loginfailbutton">
 	</form>
 </body>
 </html>

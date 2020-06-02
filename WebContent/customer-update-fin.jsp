@@ -18,8 +18,8 @@
 
 	if(processingNumber != 0){
 	%>
-	<h1>顧客情報編集 完了画面</h1>
-	顧客情報は以下のように編集されました。
+	<h1>顧客情報変更完了</h1>
+	<p>顧客情報は以下のように変更されました。</p>
 	 <table border="1">
     <tr>
     	<th>顧客名称</th>
@@ -46,16 +46,16 @@
     </tr>
     </table>
     <form action="menu.jsp" method="post">
-    	<input type="submit" value="メニューに戻る">
+    	<input type="submit" value="メニューに戻る" class="menu">
     </form>
     <form action="customer-list-servlet" method="post">
-    	<input type="submit" value="一覧に戻る">
+    	<input type="submit" value="一覧に戻る" class="list">
     </form>
 
     <%} else { %>
-    <%@ include file = "header-login.jsp" %>
-	以下の顧客情報の編集に失敗しました<br>
-	顧客ID：<%=customer.getCm_id() %><br>
+	<h1>顧客情報変更失敗</h1>
+	<p>以下の顧客情報の変更に失敗しました</p><br>
+
 	<table border = 1 style = "border-collapse: collapse; border:solid 1px;">
 	<tr>
 		<th>顧客名称</th>
@@ -80,9 +80,12 @@
 		<td><%=customer.getUser_name() %></td>
 	</tr>
 	</table>
-	<form action="customer-list-servlet" method="post">
-		<input type="submit" value="メニューに戻る">
-	</form>
+    <form action="menu.jsp" method="post">
+    	<input type="submit" value="メニューに戻る" class="menu">
+    </form>
+    <form action="customer-list-servlet" method="post">
+    	<input type="submit" value="一覧に戻る" class="list">
+    </form>
 	<%} %>
 </body>
 </html>

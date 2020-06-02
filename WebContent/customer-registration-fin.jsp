@@ -9,8 +9,7 @@
 </head>
 
 <body>
-
-	<%@ include file = "header-login.jsp" %>
+	<%@ include file="header-login.jsp"%>
 
 	<%--成功・失敗のフラグを受け取る--%>
 	<%
@@ -24,10 +23,12 @@
 		if (flg > 0) {
 	%>
 
-	以下の情報を登録しました。
+	<h1>顧客登録完了</h1>
+
+	<p>以下の情報を登録しました。</p>
 	<br>
 
-	<hr>
+
 	<table border=1 style="border-collapse: collapse; border: solid 1px;">
 		<tbody>
 			<tr>
@@ -46,23 +47,27 @@
 				<td><%=customer.getCm_name_kana()%></td>
 				<td><%=customer.getPt_code()%></td>
 				<td><%=customer.getAddress()%></td>
-				<td><%=customer.getArea_code()%></td>
+				<td><%=customer.getArea_name()%></td>
 				<td><%=customer.getCt_person_name()%></td>
 				<td><%=customer.getCt_person_name_kana()%></td>
 				<td><%=customer.getCt_person_tel()%></td>
-				<td><%=customer.getUser_id()%></td>
+				<td><%=customer.getUser_name()%></td>
 			</tr>
 
 		</tbody>
 	</table>
+	<form action="customer-registration-servlet" method="post">
+		<input type="submit" value="引き続き登録する"  class="next-registration">
+	</form>
 	<form action="menu.jsp" method="post">
-		<input type="submit" value="メニュー">
+		<input type="submit" value="メニュー" class="menu">
 	</form>
 
 	<%
 		} else {
 	%><%--削除失敗 --%>
-	以下の情報の登録に失敗しました。
+	<h1>顧客登録失敗</h1>
+	<p>以下の情報の登録に失敗しました。</p>
 	<br>
 	<table border=1 style="border-collapse: collapse; border: solid 1px;">
 		<tr>
@@ -81,16 +86,20 @@
 			<td><%=customer.getCm_name_kana()%></td>
 			<td><%=customer.getPt_code()%></td>
 			<td><%=customer.getAddress()%></td>
-			<td><%=customer.getArea_code()%></td>
+			<td><%=customer.getArea_name()%></td>
 			<td><%=customer.getCt_person_name()%></td>
 			<td><%=customer.getCt_person_name_kana()%></td>
 			<td><%=customer.getCt_person_tel()%></td>
-			<td><%=customer.getUser_id()%></td>
+			<td><%=customer.getUser_name()%></td>
 		</tr>
 	</table>
-	<form action="menu.jsp" method="post">
-		<input type="submit" value="メニュー">
+	<form action="customer-registration-servlet" method="post">
+		<input type="submit" value="登録画面に戻る" class="next-registration">
 	</form>
+	<form action="menu.jsp" method="post">
+		<input type="submit" value="メニュー" class="menu">
+	</form>
+
 	<%} %>
 
 </body>

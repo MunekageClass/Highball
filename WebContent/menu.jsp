@@ -14,22 +14,17 @@
 		%>
 			<!-- ヘッタ挿入 -->
 			<%@ include file = "header-login.jsp" %>
+
+
 			<h1>メニュー</h1>
-			<div align="center">
-			<form action="customer-registration-servlet" method="POST" style="position: centor" >
-				<input type="submit" value="顧客情報を登録する" class="registration">
+
+			<form action="customer-registration-servlet" method="POST">
+				<input type="submit" value="顧客情報登録" class="menubutton">
 			</form>
-			</div>
 
-
-			<br>
-
-			<div align="center" style="">
 			<form action="customer-list-servlet" method="POST" >
-				<input type="submit" value="顧客一覧を表示する" class="list">
+				<input type="submit" value="顧客一覧表示" class="listbutton">
 			</form>
-			</div>
-
 
 		<%
 			}else{

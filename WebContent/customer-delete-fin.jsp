@@ -19,9 +19,10 @@
 <%CustomerBean delete_customer=(CustomerBean)session.getAttribute("delete_customer"); %>
 <%--削除完了--%>
 <%if(flg==1){ %>
-<h2>削除完了画面</h2>
-以下の顧客情報を削除しました。<br>
-顧客ID：<%=delete_customer.getCm_id() %><br>
+<h1>顧客情報削除完了</h1>
+<p>以下の顧客情報を削除しました。</p>
+<br>
+
 <table border = 1 style = "border-collapse: collapse; border:solid 1px;">
 <tr><th>顧客名称</th>
 	<th>顧客名称かな</th>
@@ -71,19 +72,19 @@
 </table>
 <br>
 <form action="menu.jsp" method="post" >
-<input type="submit" value="メニュー">
+<input type="submit" value="メニューに戻る" class="menu">
 </form>
 
 <form action="customer-list-servlet" method="post" >
-<input type="submit" value="一覧に戻る">
+<input type="submit" value="一覧に戻る" class="list">
 </form>
 
 
 
 <%} else{ %><%--削除失敗 --%>
-<h2>削除エラー画面</h2>
-以下の顧客情報の削除に失敗しました<br>
-顧客ID：<%=delete_customer.getCm_id() %><br>
+<h1>削除エラー画面</h1>
+<p>以下の顧客情報の削除に失敗しました</p>
+<br>
 <table border = 1 style = "border-collapse: collapse; border:solid 1px;">
 <tr><th>顧客名称</th>
 	<th>顧客名称かな</th>
@@ -111,7 +112,7 @@
 	<%} %></td>
 
 	<td><%if(!(delete_customer.getArea_code()==null)){ %>
-		<%=delete_customer.getArea_code() %>
+		<%=delete_customer.getArea_name() %>
 	<%} %></td>
 
 	<td><%if(!(delete_customer.getCt_person_name()==null)){ %>
@@ -127,13 +128,13 @@
 	<%} %></td>
 
 	<td><%if(!(delete_customer.getUser_id()==null)){ %>
-		<%=delete_customer.getUser_id() %>
+		<%=delete_customer.getUser_name() %>
 	<%} %></td>
 </tr>
 </table>
 
 <form action="customer-list-servlet" method="post">
-<input type="submit" value="一覧に戻る">
+<input type="submit" value="一覧に戻る" class="list">
 </form>
 <%} %>
 </body>

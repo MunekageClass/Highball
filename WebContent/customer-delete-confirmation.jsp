@@ -5,17 +5,20 @@
 <head>
 <meta charset="UTF-8">
 <title>顧客情報削除確認画面</title>
-<link rel="stylesheet" type="text/css" href="css/customer-delete.css">
+<link rel="stylesheet" type="text/css" href="css/customer-delete-confirmation.css">
 </head>
 <body>
 <%@ include file="header-login.jsp"%>
 
-<h2>顧客情報削除確認画面</h2>
+<h1>顧客情報削除確認</h1>
 <br>
 <%CustomerBean delete_customer=(CustomerBean)session.getAttribute("delete_customer"); %>
 
+<p>
+顧客ID：<%=delete_customer.getCm_id() %>さんの顧客情報を削除してよろしいですか？
+</p>
 
-顧客ID：<%=delete_customer.getCm_id() %>さんの顧客情報を削除してよろしいですか？<br>
+<br>
 <table border = 1 style = "border-collapse: collapse; border:solid 1px;">
 <tr><th>顧客名称</th>
 	<th>顧客名称かな</th>
@@ -67,8 +70,12 @@
 </tr>
 </table>
 <form action="customer-delete" method="post">
-<input type="submit" value="削除">
+<input type="submit" value="削除" class="delete">
 </form>
+
+<form action="customer-list-servlet" method="POST">
+		<button type='submit' class="list">顧客一覧に戻る</button>
+	</form>
 
 </body>
 </html>

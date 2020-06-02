@@ -4,7 +4,7 @@ h1 {
 	position: absolute;
 	width: 325px;
 	height: 91px;
-	left: 40%;
+	left: 44%;
 	top: 70px;
 	font-family: Roboto;
 	font-style: normal;
@@ -14,12 +14,14 @@ h1 {
 	color: #000000;
 }
 
-.registration {
+
+
+.menubutton {
 	position: absolute;
-	width: 40%;
-	height: 60px;
-	left: 27%;
-	top: 200px;
+	width: 30%;
+	height: 10%;
+	left: 35%;
+	top: 40%;
 	background: #FF5959;
 	mix-blend-mode: darken;
 	border: 1px solid #FF5959;
@@ -31,12 +33,12 @@ h1 {
 	font-weight: bold;
 }
 
-.list {
+.listbutton {
 	position: absolute;
-	width: 40%;
-	height: 60px;
-	left: 27%;
-	top: 300px;
+	width: 30%;
+	height: 10%;
+	left: 35%;
+	top: 55%;
 	background: #FF5959;
 	mix-blend-mode: darken;
 	border: 1px solid #FF5959;

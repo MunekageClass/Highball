@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>顧客情報登録画面</title>
 <link rel="stylesheet" type="text/css" href="css/customer-registration.css">
-<link rel="stylesheet" type="text/css" href="css/customer-registration.css">
 </head>
 
 <body>
@@ -67,7 +66,11 @@
 			</tbody>
 		</table>
 		<hr>
-		<input type="submit" value="登録する">
+		<input type="submit" value="登録する" class="registration">
+	</form>
+
+	<form action="menu-servlet" method="POST">
+		<button type='submit' class="menu">メニューに戻る</button>
 	</form>
 </body>
 </html>
