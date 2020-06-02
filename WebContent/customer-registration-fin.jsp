@@ -56,12 +56,19 @@
 
 		</tbody>
 	</table>
+	<br>
 	<form action="customer-registration-servlet" method="post">
 		<input type="submit" value="引き続き登録する"  class="next-registration">
 	</form>
+	<br>
 	<form action="menu.jsp" method="post">
 		<input type="submit" value="メニュー" class="menu">
 	</form>
+
+
+
+
+
 
 	<%
 		} else {
@@ -69,6 +76,7 @@
 	<h1>顧客登録失敗</h1>
 	<p>以下の情報の登録に失敗しました。</p>
 	<br>
+	<div class="table1">
 	<table border=1 style="border-collapse: collapse; border: solid 1px;">
 		<tr>
 			<th>顧客名称</th>
@@ -93,9 +101,12 @@
 			<td><%=customer.getUser_name()%></td>
 		</tr>
 	</table>
+	</div>
+	<br>
 	<form action="customer-registration-servlet" method="post">
 		<input type="submit" value="登録画面に戻る" class="next-registration">
 	</form>
+	<br>
 	<form action="menu.jsp" method="post">
 		<input type="submit" value="メニュー" class="menu">
 	</form>

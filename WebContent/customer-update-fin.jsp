@@ -52,10 +52,17 @@
     	<input type="submit" value="一覧に戻る" class="list">
     </form>
 
+
+
+
+
+
+
     <%} else { %>
 	<h1>顧客情報変更失敗</h1>
 	<p>以下の顧客情報の変更に失敗しました</p><br>
 
+	<div class="table1">
 	<table border = 1 style = "border-collapse: collapse; border:solid 1px;">
 	<tr>
 		<th>顧客名称</th>
@@ -80,12 +87,17 @@
 		<td><%=customer.getUser_name() %></td>
 	</tr>
 	</table>
+	</div>
+    <br>
+	<div class="table2">
     <form action="menu.jsp" method="post">
     	<input type="submit" value="メニューに戻る" class="menu">
     </form>
+    <br>
     <form action="customer-list-servlet" method="post">
     	<input type="submit" value="一覧に戻る" class="list">
     </form>
+    </div>
 	<%} %>
 </body>
 </html>
